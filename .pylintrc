@@ -7,7 +7,8 @@ disable=
       W0703, #Catching too general exception,
       C0209, #Consider using f-string,
       E0015, #unrecognized-option,
-      C0304, #missing-final-newline
+      C0304, #missing-final-newline,
+      C0321, # multiple-statement
 
 # only in one or another interpreter, leading to false positives when analysed.
 analyse-fallback-blocks=no
