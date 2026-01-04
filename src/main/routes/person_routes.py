@@ -20,7 +20,7 @@ def create_person():
 
         return jsonify(http_response.body),http_response.status_code
     except Exception as exception:
-        handle_errors(exception)
+        http_response = handle_errors(exception)
 
         return jsonify(http_response.body),http_response.status_code
 
@@ -37,6 +37,6 @@ def find_person(person_id):
 
         return jsonify(http_response.body),http_response.status_code
     except Exception as exception:
-        handle_errors(exception)
+        http_response = handle_errors(exception)
 
         return jsonify(http_response.body),http_response.status_code

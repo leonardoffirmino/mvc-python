@@ -15,7 +15,7 @@ def list_pets():
         http_response = view.handle(http_request)
         return jsonify(http_response.body),http_response.status_code
     except Exception as excetpion:
-        handle_errors(excetpion)
+        http_response= handle_errors(excetpion)
         return jsonify(http_response.body),http_response.status_code
 
 @pet_route_bp.route("/pets/<name>", methods=["DELETE"])
@@ -27,5 +27,5 @@ def delete_pet(name):
 
         return jsonify(http_response.body),http_response.status_code
     except Exception as exception:
-        handle_errors(exception)
-        return jsonify(http_response.body),http_response.status_codew
+        http_response = handle_errors(exception)
+        return jsonify(http_response.body),http_response.status_code
